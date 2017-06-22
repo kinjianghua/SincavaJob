@@ -19,7 +19,11 @@
     $kk->eat();
     $kk->sing();
 
-	//var_dump($_SERVER)
+
+    $bb = clone $kk;
+    $bb->sing();
+
+
 
 	class MyClass{
 
