@@ -1,42 +1,26 @@
 <?php
 
-	/* multi line comment */
 
-	// echo "Hello, Jianghua";
+	$child = new Employee();
+	$child->name = "haohao";
 
-	// $do = 1;
-	// $b = "foo bar";
-	// $c = array(1, 2, 3);
+	$child->sing();
 
+	class Employee
+	{
 
-    // var_dump 1) 変数のタイプ　２）変数の長さ　３）変数の中身
-	// var_dump($do);     // int(1)
-	// var_dump($b);     // string(7) "foo bar
-	// var_dump($c);     // array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }
-
-	$kk = new MyClass();
-	$kk->work();
-    $kk->eat();
-    $kk->sing();
-
-
-    $bb = clone $kk;
-    $bb->sing();
-
-
-
-	class MyClass{
+		public $name;
 
 		public function work() {
 			echo '書類を整理しています', PHP_EOL;
 		}
 
 		public function eat() {
-			echo 'ピザを食べている',PHP_EOL;
+			echo 'ピザを食べている', PHP_EOL;
 		}
 
 		public function sing(){
-			echo '石石石ーーーー',PHP_EOL;
+			echo $this->name, ' is singing...', PHP_EOL;
 		}
 
 	}
